@@ -1,0 +1,43 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm with-env tsx watch ./index.ts --tsconfig tsconfig.json",
+    "buildte": "esbuild index=./src --bundle --splitting --format=esm --minify --sourcemap=inline --outdir=/mnt/e/Servers/RageTest/packages/core/ --platform=node --loader:.ts=ts",
+    "build": "tsx ./scripts/build.ts",
+    "clean": "git clean -xdf .turbo node_modules",
+    "start": "node dist",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.1",
+    "@ziim/db": "^0.1.0",
+    "@ziim/shared": "^0.0.1",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@ragempcommunity/types-server": "^2.1.4",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/node": "^18.16.3",
+    "@ziim/eslint-config": "^0.1.0",
+    "colorette": "^2.0.20",
+    "esbuild": "^0.18.10",
+    "esbuild-plugin-fileloc": "^0.0.6",
+    "eslint": "^8.39.0",
+    "fs-jetpack": "^5.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=18.16",
+    "pnpm": ">=7.27"
+  }
+}

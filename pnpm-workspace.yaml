@@ -1,3 +1,8 @@
 packages:
-  - "apps/*"
-  - "packages/*"
+  - "apps/server"
+  - "apps/client"
+  - "apps/cef"
+  - "apps/web"
+  - "packages/db"
+  - "packages/shared"
+  - "packages/config/*"

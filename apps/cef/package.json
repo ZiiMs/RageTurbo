@@ -1,0 +1,30 @@
+{
+    "name": "cef",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "@ziim/tailwind-config": "^0.1.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@ragempcommunity/types-cef": "^2.1.4",
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.6",
+        "@vitejs/plugin-react-swc": "^3.3.2",
+        "@ziim/eslint-config": "^0.1.0",
+        "autoprefixer": "^10.4.14",
+        "eslint": "^8.44.0",
+        "postcss": "^8.4.25",
+        "tailwindcss": "^3.3.2",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.0"
+    }
+}

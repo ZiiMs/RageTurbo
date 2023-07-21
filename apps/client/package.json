@@ -1,0 +1,37 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "pnpm with-env tsx watch ./index.ts --tsconfig tsconfig.json",
+    "builds": "esbuild index=./src --bundle --minify --sourcemap=inline --outdir=/mnt/e/Servers/RageTest/client_packages/ --platform=node --loader:.ts=ts",
+    "clean": "git clean -xdf .turbo node_modules",
+    "build": "tsx ./scripts/build.ts",
+    "start": "node dist",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ziim/shared": "^0.0.1"
+  },
+  "devDependencies": {
+    "@ragempcommunity/types-client": "^2.1.4",
+    "@types/node": "^18.16.3",
+    "@ziim/eslint-config": "^0.1.0",
+    "colorette": "^2.0.20",
+    "dotenv": "^16.3.1",
+    "esbuild": "^0.18.10",
+    "eslint": "^8.39.0",
+    "fs-jetpack": "^5.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "engines": {
+    "node": ">=18.16",
+    "pnpm": ">=7.27"
+  }
+}

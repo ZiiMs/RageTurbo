@@ -1,18 +1,31 @@
 {
-  "private": true,
-  "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
-  },
-  "devDependencies": {
-    "@turbo/gen": "^1.9.7",
-    "eslint": "^7.32.0",
-    "eslint-config-custom": "workspace:*",
-    "prettier": "^2.5.1",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.15.0",
-  "name": "RageTurbo"
+    "name": "rageturbo",
+    "private": true,
+    "scripts": {
+        "build": "turbo build && tsx ./scripts/copy.ts",
+        "copy": "tsx ./scripts/copy.ts",
+        "clean": "git clean -xdf node_modules",
+        "clean:workspaces": "turbo clean",
+        "db:generate": "cd ./packages/db/ && pnpm db:generate && cd ../../ && pnpm db:migrate",
+        "db:migrate": "turbo db:migrate",
+        "db:studio": "pnpm -F db dev",
+        "dev": "turbo dev --parallel",
+        "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
+        "lint": "turbo lint && manypkg check",
+        "lint:fix": "turbo lint:fix && manypkg fix",
+        "type-check": "turbo type-check"
+    },
+    "devDependencies": {
+        "@ziim/eslint-config": "^0.1.0",
+        "@turbo/gen": "^1.9.7",
+        "@ianvs/prettier-plugin-sort-imports": "^4.0.2",
+        "@manypkg/cli": "^0.20.0",
+        "@types/prettier": "^2.7.3",
+        "eslint": "^8.42.0",
+        "prettier": "^2.8.8",
+        "prettier-plugin-tailwindcss": "^0.3.0",
+        "turbo": "latest",
+        "typescript": "^5.1.3"
+    },
+    "packageManager": "pnpm@8.6.3"
 }

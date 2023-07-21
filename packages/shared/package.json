@@ -1,0 +1,13 @@
+{
+  "name": "@ziim/shared",
+  "version": "0.0.1",
+  "main": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "git clean -xdf .turbo node_modules"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.3",
+    "typescript": "^5.0.4"
+  }
+}

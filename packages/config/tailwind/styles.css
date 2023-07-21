@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --base: hsl(222, 22%, 9%);
+    --base-focus: hsl(222, 22%, 26.6%);
+    --base-2: hsl(222, 22%, 13.4%);
+    --base-2-focus: hsl(222, 22%, 17.8%);
+    --base-content: hsl(222, 22%, 100%);
+    --base-content-2: hsl(222, 22%, 90%);
+    --base-content-3: hsl(222, 22%, 70%);
+    --overlay: hsl(222, 22%, 16.7%);
+    --overlay-focus: hsl(222, 22%, 36.5%);
+    --overlay-2: hsl(222, 22%, 24.4%);
+    --overlay-2-focus: hsl(222, 22%, 36.5%);
+    --overlay-content: hsl(222, 22%, 100%);
+    --overlay-content-2: hsl(222, 22%, 90%);
+    --overlay-content-3: hsl(222, 22%, 80%);
+    --line: hsl(222, 22%, 0.2%);
+    --line-focus: hsl(222, 22%, 16.7%);
+    --input: hsl(222, 22%, 12.3%);
+    --input-focus: hsl(222, 22%, 12.3%);
+    --input-content: hsl(222, 22%, 100%);
+    --input-content-2: hsl(222, 22%, 80%);
+    --primary: hsl(102, 90%, 48%);
+    --primary-focus: hsl(102, 83%, 35%);
+    --primary-subtle: hsl(102, 90%, 75.5%);
+    --primary-content: hsl(102, 90%, 0%);
+    --primary-subtle-content: hsl(102, 90%, 0%);
+    --secondary: hsl(221, 75%, 53%);
+    --secondary-focus: hsl(221, 75%, 47.5%);
+    --secondary-subtle: hsl(221, 75%, 80.5%);
+    --secondary-subtle-content: hsl(221, 75%, 0%);
+    --secondary-content: hsl(221, 75%, 100%);
+    --info: hsl(213, 49%, 61%);
+    --info-focus: hsl(213, 49%, 55.5%);
+    --info-subtle: hsl(213, 49%, 36%);
+    --info-subtle-content: hsl(213, 49%, 100%);
+    --info-content: hsl(213, 49%, 0%);
+    --danger: hsl(0, 88%, 31%);
+    --danger-focus: hsl(0, 88%, 25.5%);
+    --danger-subtle: hsl(0, 88%, 58.5%);
+    --danger-subtle-content: hsl(0, 88%, 100%);
+    --danger-content: hsl(0, 88%, 100%);
+    --success: hsl(119, 94%, 49%);
+    --success-focus: hsl(119, 94%, 43.5%);
+    --success-subtle: hsl(119, 94%, 24%);
+    --success-subtle-content: hsl(119, 94%, 100%);
+    --success-content: hsl(119, 94%, 0%);
+    --warning: hsl(68, 82%, 52%);
+    --warning-focus: hsl(68, 82%, 46.5%);
+    --warning-subtle: hsl(68, 82%, 27%);
+    --warning-subtle-content: hsl(68, 82%, 100%);
+    --warning-content: hsl(68, 82%, 0%);
+  }
+}

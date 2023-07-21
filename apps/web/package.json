@@ -1,25 +1,54 @@
 {
-  "name": "web",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^13.4.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "ui": "workspace:*"
-  },
-  "devDependencies": {
-    "@types/node": "^17.0.12",
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "eslint-config-custom": "workspace:*",
-    "tsconfig": "workspace:*",
-    "typescript": "^4.5.3"
-  }
+    "name": "web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "pnpm with-env next build",
+        "clean": "git clean -xdf .next .turbo node_modules",
+        "dev": "pnpm with-env next dev -p 3000",
+        "lint": "dotenv -v SKIP_ENV_VALIDATION=1 next lint",
+        "lint:fix": "pnpm lint --fix",
+        "start": "pnpm with-env next start",
+        "type-check": "tsc --noEmit",
+        "with-env": "dotenv -e ../../.env --"
+    },
+    "dependencies": {
+        "@t3-oss/env-nextjs": "^0.3.1",
+        "@tanstack/react-query": "^4.29.7",
+        "@trpc/client": "^10.26.0",
+        "@trpc/next": "^10.26.0",
+        "@trpc/react-query": "^10.26.0",
+        "@trpc/server": "^10.26.0",
+        "@ziim/db": "^0.1.0",
+        "@ziim/tailwind-config": "^0.1.0",
+        "bcrypt": "^5.1.0",
+        "drizzle-orm": "^0.27.1",
+        "ip": "^1.1.8",
+        "next": "^13.4.2",
+        "postgres": "^3.3.5",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "superjson": "1.12.2",
+        "zod": "^3.21.4",
+        "zustand": "^4.3.9"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.0",
+        "@types/eslint": "^8.37.0",
+        "@types/ip": "^1.1.0",
+        "@types/node": "^18.16.0",
+        "@types/prettier": "^2.7.2",
+        "@types/react": "^18.2.6",
+        "@types/react-dom": "^18.2.4",
+        "@ziim/eslint-config": "^0.1.0",
+        "autoprefixer": "^10.4.14",
+        "drizzle-kit": "^0.19.3",
+        "eslint": "^8.40.0",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.3.0",
+        "typescript": "^5.0.4"
+    },
+    "ct3aMetadata": {
+        "initVersion": "7.15.0"
+    }
 }
