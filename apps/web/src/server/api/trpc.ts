@@ -6,10 +6,11 @@
  * TL;DR - This is where all the tRPC server stuff is created and plugged in. The pieces you will
  * need to use are documented accordingly near the end.
  */
-
 import { initTRPC } from "@trpc/server";
 import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import { db } from "@ziim/db";
+// import { authStore, type Account } from "~/stores/authStore";
+// import { useAsyncStore } from "~/stores/useStore";
 import superjson from "superjson";
 import { ZodError } from "zod";
 
@@ -22,6 +23,9 @@ import { ZodError } from "zod";
  */
 
 type CreateContextOptions = Record<string, never>;
+// interface CreateContextOptions {
+//   session: Account | null;
+// }
 
 /**
  * This helper generates the "internals" for a tRPC context. If you need to use it, you can export
@@ -45,6 +49,9 @@ const createInnerTRPCContext = (_opts: CreateContextOptions) => {
  *
  * @see https://trpc.io/docs/context
  */
+
+// const session = authStore((state) => state.session);
+
 export const createTRPCContext = (_opts: FetchCreateContextFnOptions) => {
   // opts.req.headers.get("X-forwaded-For");
   return createInnerTRPCContext({});

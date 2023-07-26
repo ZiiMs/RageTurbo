@@ -5,14 +5,14 @@ import { useStore } from "~/stores/useStore";
 import aes from "crypto-js/aes";
 import { useState } from "react";
 
-export default function Register() {
+export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState<string | null>(null);
     const user = useStore(useAuthStore, (state) => state.user);
     const actions = useAuthStore((state) => state.actions);
 
-    if (actions.register === undefined) {
+    if (actions.login === undefined) {
         return <div>Loading actions</div>;
     }
     // const setSession = useStore(authStore, (state) => state.setSession);
@@ -24,7 +24,7 @@ export default function Register() {
                     <span>This is working? {user.username}</span>
                 </div>
             ) : null}
-            <span className="text-3xl text-basercontent-2 font-bold">Register</span>
+            <span className="text-3xl text-basercontent-2 font-bold">Login</span>
             <input
                 className="flex rounded-md border text-input-content border-line bg-input py-2 px-3 text-sm placeholder:text-input-content-2/25 placeholder:font-medium focus:outline-none focus:ring-2 focus:ring-line-focus focus:ring-offset-2 focus:ring-offset-secondary focus-visible"
                 value={username}
@@ -52,7 +52,7 @@ export default function Register() {
                     const hashedPass = aes.encrypt(password, nonce).toString();
 
                     actions
-                        .register(username, nonce + hashedPass)
+                        .login(username, nonce + hashedPass)
                         .then(() => {
                             setError(null);
                         })
@@ -60,11 +60,10 @@ export default function Register() {
                             console.error("Inside Login", err);
                             setError(err.message);
                         });
-
                     console.log("Sending");
                 }}
             >
-                Submit
+                Login
             </button>
             {error ? (
                 <div className="bg-red-800 rounded p-3 flex-col flex">

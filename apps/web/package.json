@@ -22,6 +22,7 @@
         "@ziim/db": "^0.1.0",
         "@ziim/tailwind-config": "^0.1.0",
         "bcrypt": "^5.1.0",
+        "crypto-js": "^4.1.1",
         "drizzle-orm": "^0.27.1",
         "ip": "^1.1.8",
         "next": "^13.4.2",
@@ -34,6 +35,7 @@
     },
     "devDependencies": {
         "@types/bcrypt": "^5.0.0",
+        "@types/crypto-js": "^4.1.1",
         "@types/eslint": "^8.37.0",
         "@types/ip": "^1.1.0",
         "@types/node": "^18.16.0",
